@@ -7,15 +7,15 @@ public class MinCoinsGreedy
     static int deno[] = {1, 2, 5, 10, 20, 50, 100, 500, 1000};
     static int n = deno.length;
 
-    static void findMin(int V)
+    static void findMin(int vector)
     {
         Vector<Integer> ans = new Vector<>();
 
         for (int i = n - 1; i >= 0; i--)
         {
-            while (V >= deno[i])
+            while (vector >= deno[i])
             {
-                V -= deno[i];
+                vector -= deno[i];
                 ans.add(deno[i]);
             }
         }
