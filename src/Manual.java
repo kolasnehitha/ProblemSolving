@@ -1,4 +1,4 @@
-public class ManualGear implements CarType{
+public class Manual implements Gear{
 
     @Override
     public void setCarType(Car car) {
