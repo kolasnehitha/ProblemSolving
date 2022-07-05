@@ -1,3 +1,3 @@
-public interface CarType {
+public interface Gear {
     void setCarType(Car car);
 }
