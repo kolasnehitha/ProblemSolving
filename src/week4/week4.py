@@ -18,10 +18,13 @@ endLocation = input("Enter end Location")
 if not checkLocation(startLocation, endLocation):
     print("check entered locations")
 else:
-    routeDistance = distance(startLocation, endLocation)
-    print("Distance from start point to end point is ", routeDistance)
-    transport = int(input("Enter type of transport 1-> Two wheeler 2-> Four Wheeler"))
-    if transport == 1:
-        print(" Time estimation is ",twoWheelerEstimation(routeDistance))
+    if startLocation == endLocation:
+        print("Distance from start point to end point is 0")
     else:
-        print(" Time estimation is ",fourWheelerEstimation(routeDistance))
+        routeDistance = distance(startLocation, endLocation)
+        print("Distance from start point to end point is ", routeDistance)
+        transport = int(input("Enter type of transport 1-> Two wheeler 2-> Four Wheeler"))
+        if transport == 1:
+           print(" Time estimation is ",twoWheelerEstimation(routeDistance))
+        else:
+           print(" Time estimation is ",fourWheelerEstimation(routeDistance))
